@@ -1,0 +1,31 @@
+//Name: Nai Shih
+//EECS project 5
+//Date: 12/2018
+//Purpose: Declares EventClass variables
+
+#ifndef _EVENTCLASS_H_
+#define _EVENTCLASS_H_
+
+#include <iostream>
+
+using namespace std;
+
+class EventClass
+{
+private:
+    int eventType;
+    int time;
+    int customerID;
+
+public:
+    EventClass();
+    EventClass(int inEventType, int inTime, int inCustomerID);
+    int getEventType() const;
+    int getTime() const;
+    int getCustomerID() const;
+    bool operator< (const EventClass &in) const;
+    bool operator>= (const EventClass &in) const;
+    ~EventClass();
+};   
+
+#endif

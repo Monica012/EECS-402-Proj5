@@ -1,0 +1,55 @@
+//Name: Nai Shih
+//EECS402 proj5
+//Date:12/2018
+//Purpose: declares variables for simClass.cpp
+
+#ifndef _RESTAURANTCLASS_H_
+#define _RESTAURANTCLASS_H_
+
+#include <string>
+#include "constants.h"
+#include "EventClass.h"
+#include "SortedListClass.h"
+#include "FIFOQueueClass.h"
+#include "random.h"
+#include "readVal.h"
+
+using namespace std;
+
+class RestaurantClass
+{
+private:
+    SortedListClass< EventClass > eventList;
+    FIFOQueueClass< EventClass > serveLine;
+    bool isValid;
+    int percentage;
+    int pplLongLine;
+    int mean;
+    int sd;
+    int closedTime;
+    int max;
+    int min;
+    int seed; 
+    int custLeft;
+    int custNum;
+    bool isBusy;
+    int busyTime;
+    int custWaitNum; 
+    int longestLine;
+    int totoCustArrTime;
+    int totoCustArrEvent;
+    int longestArrTime;
+    int lastCustTime;
+    
+
+public:
+    void getNext();
+    void setFirst();
+    bool getInput(ifstream &inFileName);
+    int getEventListNum();
+    void print();
+    
+    RestaurantClass();
+};
+
+#endif 
